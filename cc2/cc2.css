@@ -1,0 +1,99 @@
+.screen{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:400px;
+    height:400px;
+    background:#3FAF82;
+  }
+  
+  .hamburger{
+    display:flex;
+    flex-direction:column;
+    cursor:pointer;
+  }
+  
+  .line1-hamburger,.line2-hamburger, .line3-hamburger {
+    width:80px;
+    height:10px;
+    background:white;
+    margin:10px;
+    border-radius:3px;
+  }
+  
+  .line1-cross,.line2-cross, .line3-cross {
+    width:80px;
+    height:10px;
+    background:white;
+    border-radius:3px;
+  }
+  
+  .line1-cross{
+    z-index:1;
+    animation-name: animate-line1;
+    animation-duration:0.5s;
+    position:relative;
+    bottom:-10px;
+  }
+  
+  
+  .line2-cross{
+    z-index:0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+  }
+  
+  .line3-cross{
+    z-index:2;
+    animation-name: animate-line3;
+    animation-duration:0.6s;
+    animation-direction:reverse;
+    position:relative;
+    top:-10px;
+    
+  }
+  
+  @keyframes animate-line1{
+    0%{
+      position:relative;
+      bottom:20px;
+      transform:rotate(0deg)
+    }
+    50%{
+      position:relative;
+      bottom:-10px;
+      transform: rotate(0deg);
+    }
+    100%{
+      position:relative;
+      bottom:-10px;
+    }
+  }
+  
+  @keyframes animate-line3{
+    0%{
+      position:relative;
+      top:-20px;
+      transform:rotate(0deg)
+    }
+    50%{
+      position:relative;
+      top:10px;
+      transform: rotate(0deg);
+    }
+    100%{
+      position:relative;
+      top:10px;
+    }
+  }
+  
+  
+  
+  
